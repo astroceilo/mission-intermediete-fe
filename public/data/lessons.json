@@ -1,0 +1,77 @@
+[
+  { "course_id": 1, "modules": [
+    { "id": 1, "title": "Pengenalan Audit", "duration": 1800 },
+    { "id": 2, "title": "Dasar Laporan Keuangan", "duration": 1200 },
+    { "id": 3, "title": "Analisis Rasio", "duration": 2400 },
+    { "id": 4, "title": "Laporan Arus Kas", "duration": 2400 },
+    { "id": 5, "title": "Studi Kasus Audit", "duration": 1200 }
+  ]},
+  { "course_id": 2, "modules": [
+    { "id": 1, "title": "Intro Digital Marketing", "duration": 1500 },
+    { "id": 2, "title": "SEO Dasar", "duration": 3000 },
+    { "id": 3, "title": "Social Media Marketing", "duration": 2700 },
+    { "id": 4, "title": "Google Ads", "duration": 2700 },
+    { "id": 5, "title": "Email Campaign", "duration": 1500 },
+    { "id": 6, "title": "Analisis Trafik", "duration": 1500 },
+    { "id": 7, "title": "Studi Kasus", "duration": 3000 }
+  ]},
+  { "course_id": 3, "modules": [
+    { "id": 1, "title": "Intro Frontend", "duration": 2400 },
+    { "id": 2, "title": "HTML Dasar", "duration": 1500 },
+    { "id": 3, "title": "CSS Modern", "duration": 2400 },
+    { "id": 4, "title": "JavaScript Dasar", "duration": 3000 },
+    { "id": 5, "title": "React Basic", "duration": 1200 },
+    { "id": 6, "title": "State & Props", "duration": 2100 },
+    { "id": 7, "title": "Mini Project", "duration": 2100 }
+  ]},
+  { "course_id": 4, "modules": [
+    { "id": 1, "title": "Intro Design Thinking", "duration": 1500 },
+    { "id": 2, "title": "UI vs UX", "duration": 3600 },
+    { "id": 3, "title": "Wireframing", "duration": 1500 },
+    { "id": 4, "title": "Prototyping Figma", "duration": 3600 },
+    { "id": 5, "title": "Testing User Flow", "duration": 3600 },
+    { "id": 6, "title": "Final Project", "duration": 1500 }
+  ]},
+  { "course_id": 5, "modules": [
+    { "id": 1, "title": "Intro Data Science", "duration": 1200 },
+    { "id": 2, "title": "Python Basics", "duration": 1800 },
+    { "id": 3, "title": "Numpy & Pandas", "duration": 2400 },
+    { "id": 4, "title": "Data Visualization", "duration": 1200 },
+    { "id": 5, "title": "Exploratory Analysis", "duration": 1800 },
+    { "id": 6, "title": "Regression", "duration": 1200 },
+    { "id": 7, "title": "Classification", "duration": 3000 },
+    { "id": 8, "title": "Project", "duration": 1500 }
+  ]},
+  { "course_id": 6, "modules": [
+    { "id": 1, "title": "Intro Project Management", "duration": 3000 },
+    { "id": 2, "title": "Agile Basics", "duration": 2700 },
+    { "id": 3, "title": "Scrum Framework", "duration": 2100 },
+    { "id": 4, "title": "Sprint Planning", "duration": 3600 },
+    { "id": 5, "title": "Case Study", "duration": 1500 }
+  ]},
+  { "course_id": 7, "modules": [
+    { "id": 1, "title": "Intro Node.js", "duration": 3600 },
+    { "id": 2, "title": "Express Basics", "duration": 2700 },
+    { "id": 3, "title": "REST API", "duration": 3000 },
+    { "id": 4, "title": "Authentication", "duration": 1500 },
+    { "id": 5, "title": "Middleware", "duration": 2400 },
+    { "id": 6, "title": "Deploy Project", "duration": 2100 }
+  ]},
+  { "course_id": 8, "modules": [
+    { "id": 1, "title": "Intro Flutter", "duration": 2100 },
+    { "id": 2, "title": "Widget Basics", "duration": 1500 },
+    { "id": 3, "title": "Layouting", "duration": 2700 },
+    { "id": 4, "title": "Navigation", "duration": 1500 },
+    { "id": 5, "title": "State Management", "duration": 1500 },
+    { "id": 6, "title": "Firebase Integration", "duration": 1200 },
+    { "id": 7, "title": "API Handling", "duration": 1500 },
+    { "id": 8, "title": "Push Notification", "duration": 2400 },
+    { "id": 9, "title": "Final Project", "duration": 1500 }
+  ]},
+  { "course_id": 9, "modules": [
+    { "id": 1, "title": "Intro English", "duration": 1500 },
+    { "id": 2, "title": "Grammar Essentials", "duration": 1500 },
+    { "id": 3, "title": "Business Vocabulary", "duration": 2700 },
+    { "id": 4, "title": "Speaking Practice", "duration": 2700 }
+  ]}
+]

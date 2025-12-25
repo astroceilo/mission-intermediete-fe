@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Jenna Ortega",
+    "email": "jenna@gojek.com",
+    "profile_image": "/assets/images/profile/tutors/1.png",
+    "position": "Senior Accountant",
+    "company": "Gojek"
+  },
+  {
+    "id": 2,
+    "name": "Andi Saputra",
+    "email": "andi@gmail.com",
+    "profile_image": "/assets/images/profile/tutors/2.png",
+    "position": "Mahasiswa Ekonomi",
+    "company": "Universitas Indonesia"
+  },
+  {
+    "id": 3,
+    "name": "Nadia Rahma",
+    "email": "nadia@tokopedia.com",
+    "profile_image": "/assets/images/profile/tutors/3.png",
+    "position": "HR Specialist",
+    "company": "Tokopedia"
+  },
+  {
+    "id": 4,
+    "name": "Rio Fadillah",
+    "email": "rio@bukalapak.com",
+    "profile_image": "/assets/images/profile/tutors/4.png",
+    "position": "Software Engineer",
+    "company": "Bukalapak"
+  },
+  {
+    "id": 5,
+    "name": "Cindy Oktaviani",
+    "email": "cindy@dana.id",
+    "profile_image": "/assets/images/profile/tutors/5.png",
+    "position": "Marketing Lead",
+    "company": "DANA Indonesia"
+  },
+  {
+    "id": 6,
+    "name": "Rizky Mahendra",
+    "email": "rizky@bca.co.id",
+    "profile_image": "/assets/images/profile/tutors/6.png",
+    "position": "Financial Analyst",
+    "company": "BCA"
+  },
+  {
+    "id": 7,
+    "name": "Putri Larasati",
+    "email": "putri@shopee.com",
+    "profile_image": "/assets/images/profile/tutors/7.png",
+    "position": "UI/UX Designer",
+    "company": "Shopee"
+  },
+  {
+    "id": 8,
+    "name": "Dimas Arya",
+    "email": "dimas@gmail.com",
+    "profile_image": "/assets/images/profile/tutors/8.png",
+    "position": "Freelancer",
+    "company": "Remote Worker"
+  },
+  {
+    "id": 9,
+    "name": "Rani Prameswari",
+    "email": "rani@astra.co.id",
+    "profile_image": "/assets/images/profile/tutors/4.png",
+    "position": "Business Consultant",
+    "company": "Astra Group"
+  }
+]

@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@import "tailwindcss/theme";
+
+@import "flowbite";
+
+@theme {
+  /* main color */
+  --color-main-primary: rgba(62, 207, 76, 1);
+  --color-main-primary-400: rgba(107, 226, 107, 1);
+  --color-main-primary-300: rgba(148, 240, 139, 1);
+  --color-main-primary-200: rgba(192, 250, 180, 1);
+  --color-main-primary-100: rgba(226, 252, 217, 0.8);
+
+  --color-main-secondary: rgba(255, 189, 58, 1);
+  --color-main-secondary-400: rgba(255, 210, 107, 1);
+  --color-main-secondary-300: rgba(255, 223, 136, 1);
+  --color-main-secondary-200: rgba(255, 236, 176, 1);
+  --color-main-secondary-100: rgba(255, 247, 215, 0.8);
+
+  --color-main-tertiary: rgba(246, 73, 32, 1);
+  --color-main-tertiary-400: rgba(249, 130, 86, 1);
+  --color-main-tertiary-300: rgba(252, 165, 120, 1);
+  --color-main-tertiary-200: rgba(254, 202, 165, 1);
+  --color-main-tertiary-100: rgba(254, 232, 210, 0.8);
+
+  /* text dark */
+  --color-text-dark-primary: rgba(34, 35, 37, 1);
+  --color-text-dark-secondary: rgba(51, 51, 51, 0.68);
+  --color-text-dark-disabled: rgba(58, 53, 65, 0.38);
+
+  /* text light */
+  --color-text-light-primary: rgba(255, 255, 255, 1);
+  --color-text-light-secondary: rgba(193, 194, 196, 1);
+  --color-text-light-disabled: rgba(157, 158, 161, 1);
+
+  /* other */
+  --color-other-primarybg: rgba(255, 255, 255, 1);
+  --color-other-basebg: rgba(244, 245, 250, 1);
+  --color-other-secondarybg: rgba(249, 250, 252, 1);
+  --color-other-border: rgba(58, 53, 65, 0.12);
+
+  /* info */
+  --color-info-pressed: rgba(4, 74, 162, 1);
+  --color-info-hover: rgba(6, 99, 194, 1);
+  --color-info-default: rgba(9, 128, 226, 1);
+  --color-info-background: rgba(235, 249, 254, 1);
+
+  /* success */
+  --color-success-pressed: rgba(28, 150, 117, 1);
+  --color-success-hover: rgba(40, 179, 128, 1);
+  --color-success-default: rgba(56, 209, 137, 1);
+  --color-success-background: rgba(224, 253, 223, 1);
+
+  /* warning */
+  --color-warning-pressed: rgba(181, 164, 13, 1);
+  --color-warning-hover: rgba(216, 198, 19, 1);
+  --color-warning-default: rgba(252, 233, 27, 1);
+  --color-warning-background: rgba(252, 248, 202, 1);
+
+  /* error */
+  --color-error-pressed: rgba(183, 35, 21, 1);
+  --color-error-hover: rgba(219, 61, 31, 1);
+  --color-error-default: rgba(255, 92, 43, 1);
+  --color-error-background: rgba(252, 227, 209, 1);
+
+  /* gradients */
+  --gradient-info: linear-gradient(90deg, rgba(0, 76, 232, 1), rgba(111, 158, 255, 1));
+  --gradient-success: linear-gradient(90deg, rgba(0, 194, 71, 1) 0%, rgba(115, 255, 166, 1) 100%);
+  --gradient-warning: linear-gradient(90deg, rgba(255, 225, 106, 1) 0%, rgba(255, 229, 128, 0.21) 100%);
+  --gradient-error: linear-gradient(90deg, rgba(255, 51, 51, 1) 0%, rgba(255, 138, 155, 1) 100%);
+
+  /* greyscale */
+  --color-grey-900: rgba(33, 33, 33, 1);
+  --color-grey-800: rgba(66, 66, 66, 1);
+  --color-grey-700: rgba(97, 97, 97, 1);
+  --color-grey-600: rgba(117, 117, 117, 1);
+  --color-grey-500: rgba(158, 158, 158, 1);
+  --color-grey-400: rgba(189, 189, 189, 1);
+  --color-grey-300: rgba(224, 224, 224, 1);
+  --color-grey-200: rgba(238, 238, 238, 1);
+  --color-grey-100: rgba(245, 245, 245, 1);
+  --color-grey-50: rgba(250, 250, 250, 1);
+
+  /* typography */
+  --font-dm: "DM Sans", sans-serif;
+  --font-lato: "Lato", sans-serif;
+  --font-pop: "Poppins", sans-serif;
+}
+
+@layer utilities {
+
+  /* font used */
+  .text-lato-bold {
+    font-family: var(--font-lato);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+  ;
+
+  .text-lato-semibold {
+    font-family: var(--font-lato);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+  .text-lato-medium {
+    font-family: var(--font-lato);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+  .text-lato-regular {
+    font-family: var(--font-lato);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+  /* heading poppins */
+  .text-h1 {
+    font-family: var(--font-pop);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .text-h2 {
+    font-family: var(--font-pop);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .text-h3 {
+    font-family: var(--font-pop);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .text-h4 {
+    font-family: var(--font-pop);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  .text-h5 {
+    font-family: var(--font-pop);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  .text-h6 {
+    font-family: var(--font-pop);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  /* heading other body large */
+  .text-other-body-large-h1 {
+    font-family: var(--font-dm);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-large-h2 {
+    font-family: var(--font-dm);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-large-h3 {
+    font-family: var(--font-dm);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-large-h4 {
+    font-family: var(--font-dm);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  /* heading other body medium */
+  .text-other-body-medium-h1 {
+    font-family: var(--font-dm);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-medium-h2 {
+    font-family: var(--font-dm);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-medium-h3 {
+    font-family: var(--font-dm);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-medium-h4 {
+    font-family: var(--font-dm);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  /* heading other body small */
+  .text-other-body-small-h1 {
+    font-family: var(--font-dm);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-small-h2 {
+    font-family: var(--font-dm);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-small-h3 {
+    font-family: var(--font-dm);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  .text-other-body-small-h4 {
+    font-family: var(--font-dm);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+
+  /* truncate text */
+  .truncate-2 {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .truncate-3 {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .truncate-4 {
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.font-dm {
+  font-family: var(--font-dm);
+}
+
+.font-lato {
+  font-family: var(--font-lato);
+}
+
+.font-pop {
+  font-family: var(--font-pop);
+}

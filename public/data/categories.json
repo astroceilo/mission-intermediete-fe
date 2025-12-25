@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Bisnis", "slug": "bisnis" },
+  { "id": 2, "name": "Pemasaran", "slug": "pemasaran" },
+  { "id": 3, "name": "Desain", "slug": "desain" },
+  { "id": 4, "name": "Pengembangan Diri", "slug": "pengembangan-diri" }
+]

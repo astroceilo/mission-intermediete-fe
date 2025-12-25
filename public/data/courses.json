@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Big 4 Auditor Financial Analyst",
+    "slug": "big-4-auditor-financial-analyst",
+    "category_id": 1,
+    "thumbnail": "/assets/images/product_card/laptop-1.png",
+    "description": "Foundations of User Experience (UX) Design adalah yang pertama dari rangkaian tujuh kursus yang akan membekali Anda dengan keterampilan yang dibutuhkan untuk melamar pekerjaan tingkat pemula dalam desain pengalaman pengguna. Desainer UX fokus pada interaksi yang dilakukan orang dengan produk seperti situs web, aplikasi seluler, dan objek fisik. Desainer UX membuat interaksi sehari-hari itu dapat digunakan, menyenangkan, dan dapat diakses. Peran seorang desainer UX tingkat pemula mungkin termasuk berempati dengan pengguna, menentukan poin rasa sakit mereka, memunculkan ide untuk solusi desain, membuat wireframe, prototipe, dan maket, dan menguji desain untuk mendapatkan umpan balik.",
+    "instructor_id": 1,
+    "price": { "original": 300000 },
+    "rating": { "stars": 2.8, "reviews": 132 }
+  },
+  {
+    "id": 2,
+    "title": "Digital Marketing Fundamentals",
+    "slug": "digital-marketing-fundamentals",
+    "category_id": 2,
+    "thumbnail": "/assets/images/product_card/laptop-2.png",
+    "description": "Kuasai dasar-dasar strategi pemasaran digital dan media sosial.",
+    "instructor_id": 2,
+    "price": { "original": 300000, "discounted": 100000 },
+    "rating": { "stars": 4.6, "reviews": 95 }
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design for Beginners",
+    "slug": "ui-ux-design-for-beginners",
+    "category_id": 3,
+    "thumbnail": "/assets/images/product_card/laptop-3.png",
+    "description": "Pelajari dasar-dasar desain antarmuka dan pengalaman pengguna.",
+    "instructor_id": 3,
+    "price": { "original": 200000, "discounted": 75000 },
+    "rating": { "stars": 4.7, "reviews": 110 }
+  },
+  {
+    "id": 4,
+    "title": "Frontend Web Development Bootcamp",
+    "slug": "frontend-web-development-bootcamp",
+    "category_id": 4,
+    "thumbnail": "/assets/images/product_card/map-compass.png",
+    "description": "Belajar HTML, CSS, dan JavaScript untuk membangun website modern.",
+    "instructor_id": 4,
+    "price": { "original": 400000, "discounted": 150000 },
+    "rating": { "stars": 4.9, "reviews": 220 }
+  },
+  {
+    "id": 5,
+    "title": "Business Strategy Masterclass",
+    "slug": "business-strategy-masterclass",
+    "category_id": 1,
+    "thumbnail": "/assets/images/product_card/study-1.png",
+    "description": "Pahami strategi bisnis dan perencanaan jangka panjang perusahaan.",
+    "instructor_id": 5,
+    "price": { "original": 350000 },
+    "rating": { "stars": 4.5, "reviews": 89 }
+  },
+  {
+    "id": 6,
+    "title": "Data Analysis with Excel",
+    "slug": "data-analysis-with-excel",
+    "category_id": 4,
+    "thumbnail": "/assets/images/product_card/study-2.png",
+    "description": "Gunakan Microsoft Excel untuk analisis data dan visualisasi laporan.",
+    "instructor_id": 6,
+    "price": { "original": 270000, "discounted": 90000 },
+    "rating": { "stars": 4.4, "reviews": 77 }
+  },
+  {
+    "id": 7,
+    "title": "Soft Skills for Workplace",
+    "slug": "soft-skills-for-workplace",
+    "category_id": 4,
+    "thumbnail": "/assets/images/product_card/study-3.png",
+    "description": "Tingkatkan kemampuan komunikasi dan kerja tim di lingkungan kerja.",
+    "instructor_id": 7,
+    "price": { "original": 150000, "discounted": 70000 },
+    "rating": { "stars": 4.6, "reviews": 64 }
+  },
+  {
+    "id": 8,
+    "title": "Introduction to Freelancing",
+    "slug": "introduction-to-freelancing",
+    "category_id": 3,
+    "thumbnail": "/assets/images/product_card/study-4.png",
+    "description": "Pelajari cara memulai karier freelance dan mengelola klien.",
+    "instructor_id": 8,
+    "price": { "original": 200000 },
+    "rating": { "stars": 4.3, "reviews": 58 }
+  },
+  {
+    "id": 9,
+    "title": "Leadership Essentials",
+    "slug": "leadership-essentials",
+    "category_id": 2,
+    "thumbnail": "/assets/images/product_card/coffe.png",
+    "description": "Bangun keterampilan kepemimpinan yang efektif untuk tim dan organisasi.",
+    "instructor_id": 9,
+    "price": { "original": 320000 },
+    "rating": { "stars": 3.8, "reviews": 104 }
+  }
+]
