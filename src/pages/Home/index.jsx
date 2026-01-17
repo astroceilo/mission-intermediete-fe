@@ -2,10 +2,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { normalizeProductForView } from "../../utils/normalizeProduct/normalizeProductForView";
 import hero from "../../assets/images/hero_section.jpg";
 import news from "../../assets/images/news-letter.jpg";
 import CardCourse from "../../components/CardCourse";
-
+import { api } from "../../services/api";
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("semua-kelas");
@@ -16,28 +17,36 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [coursesRes, usersRes, categoriesRes] = await Promise.all([
-          fetch("/data/courses.json"),
-          fetch("/data/users.json"),
-          fetch("/data/categories.json"),
-        ]);
-        const [coursesData, usersData, categoriesData] = await Promise.all([
-          coursesRes.json(),
-          usersRes.json(),
-          categoriesRes.json(),
+        const [productsRes, usersRes] = await Promise.all([
+          api.get("/products"),
+          api.get("/users"),
         ]);
 
-        // Gabungin instructor ke course berdasarkan instructor_id
-        const mergedData = coursesData.map((course) => {
-          const instructor =
-            usersData.find((u) => u.id === course.instructor_id) ?? null;
-          return { ...course, instructor };
-        });
+        const products = productsRes.data;
+        const users = usersRes.data;
 
-        setCourses(mergedData);
-        setCategories(categoriesData);
+        // mapping instructor
+        const mappedCourses = products.map((p) =>
+          normalizeProductForView(p, users)
+        );
+
+        // ambil 9 produk terbaru
+        const sortedCourses = mappedCourses.sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        );
+        const latestCourses = sortedCourses.slice(0, 9);
+
+        setCourses(latestCourses);
+
+        // kategori bisa hardcode dulu (MockAPI limit)
+        setCategories([
+          { id: 1, name: "Programming", slug: "programming" },
+          { id: 2, name: "Design", slug: "design" },
+          { id: 3, name: "Backend", slug: "backend" },
+          { id: 4, name: "Career", slug: "career" },
+        ]);
       } catch (err) {
-        console.error("Error loading data:", err);
+        console.error("Fetch error:", err);
       }
     };
 
@@ -48,12 +57,9 @@ export default function Home() {
   const filteredCourses =
     activeCategory === "semua-kelas"
       ? courses
-      : courses.filter((course) => {
-          const category = categories.find(
-            (cat) => cat.slug === activeCategory
-          );
-          return category ? course.category_id === category.id : false;
-        });
+      : courses.filter(
+          (course) => course.category.toLowerCase() === activeCategory
+        );
 
   return (
     <>

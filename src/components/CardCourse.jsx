@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import { getFinalPrice } from "../utils/price";
 import RatingStars from "./RatingStars";
 
-
 export default function CardCourse({ course }) {
   if (!course) return null;
 
   const {
     title = "Judul Tidak Diketahui",
     slug,
-    category_id,
+    category,
     thumbnail,
     description = "",
     instructor = {},
@@ -18,12 +17,7 @@ export default function CardCourse({ course }) {
     rating = {},
   } = course;
 
-  const {
-    name = "Instructor",
-    profile_image,
-    position,
-    company,
-  } = instructor ?? {};
+  const { name, avatar, position, company } = instructor ?? {};
   const { stars = 0, reviews = 0 } = rating ?? {};
 
   // hasil harga dari utils
@@ -32,7 +26,7 @@ export default function CardCourse({ course }) {
   return (
     <div
       className="group h-auto md:h-[426px] rounded-[10px] bg-other-primarybg border border-other-border p-2.5 md:p-5! flex flex-col gap-2 md:gap-4! transition duration-300 ease-in-out transform hover:shadow-lg"
-      data-category_id={category_id}
+      data-category={category}
     >
       {/* Content */}
       <div className="flex flex-col gap-2.5">
@@ -68,7 +62,7 @@ export default function CardCourse({ course }) {
               <Link to="#" className="block shrink-0">
                 <img
                   alt={name}
-                  src={profile_image || "https://via.placeholder.com/48?text=?"}
+                  src={avatar || "https://via.placeholder.com/48?text=?"}
                   className="w-10 h-10 rounded-[10px] object-cover"
                 />
               </Link>

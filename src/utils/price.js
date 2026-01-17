@@ -1,60 +1,72 @@
-export const formatPrice = (value) => {
-    if (!value || isNaN(value)) return "Rp 0";
+// export const formatPrice = (value) => {
+//   if (!value || isNaN(value)) return "Rp 0";
 
-    if (value >= 1_000_000) {
-        return `Rp ${(value / 1_000_000)
-            .toFixed(1)
-            .replace(/\.0$/, "")}JT`;
-    } else if (value >= 1_000) {
-        return `Rp ${(value / 1_000)
-            .toFixed(0)}K`;
-    } else {
-        return `Rp ${value}`;
-    }
+//   if (value >= 1_000_000) {
+//     return `Rp ${(value / 1_000_000)
+//       .toFixed(1)
+//       .replace(/\.0$/, "")}JT`;
+//   }
+
+//   if (value >= 1_000) {
+//     return `Rp ${(value / 1_000).toFixed(0)}K`;
+//   }
+
+//   return `Rp ${value}`;
+// };
+
+// Compact (Home, Card, Listing)
+export const formatPriceCompact = (value) => {
+  if (!value || isNaN(value)) return "Rp 0";
+
+  if (value >= 1_000_000) {
+    return `Rp ${(value / 1_000_000)
+      .toFixed(1)
+      .replace(/\.0$/, "")}JT`;
+  }
+
+  if (value >= 1_000) {
+    return `Rp ${(value / 1_000).toFixed(0)}K`;
+  }
+
+  return `Rp ${value}`;
 };
 
-export function getFinalPrice(price) {
-    // Jika null → return default
-    if (price === null) {
-        return {
-            final: 0,
-            hasDiscount: false,
-            original: 0,
-            formatted: {
-                original: formatPrice(0),
-                final: formatPrice(0),
-            },
-        };
-    }
+// Full (Form, Detail, Checkout)
+export const formatPriceFull = (value) => {
+  if (!value || isNaN(value)) return "Rp 0";
 
-    // Jika number → simple price tanpa diskon
-    if (typeof price === "number") {
-        return {
-            final: price,
-            hasDiscount: false,
-            original: price,
-            formatted: {
-                original: formatPrice(price),
-                final: formatPrice(price),
-            },
-        };
-    }
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  }).format(value);
+};
 
-    // Jika object dengan original & discounted
-    const original = price.original ?? 0;
-    const discounted = price.discounted ?? null;
-
-    const hasDiscount = discounted !== null && discounted < original;
-    const final = hasDiscount ? discounted : original;
-
+export function getFinalPrice(price, formatter = formatPriceCompact) {
+  // fallback aman
+  if (!price) {
     return {
-        final,
-        hasDiscount,
-        original,
-        formatted: {
-            original: formatPrice(original),
-            final: formatPrice(final),
-        },
+      final: 0,
+      hasDiscount: false,
+      formatted: {
+        original: formatter(0),
+        final: formatter(0),
+      },
     };
-}
+  }
 
+  const original = price.original ?? 0;
+  const discount = price.discount ?? 0;
+  const final = price.final ?? original;
+
+  const hasDiscount = discount > 0 && final < original;
+
+  return {
+    final,
+    hasDiscount,
+    formatted: {
+      original: formatter(original),
+      final: formatter(final),
+    },
+  };
+}

@@ -109,7 +109,7 @@ export default function Login() {
                 className={`w-full font-dm font-normal text-sm md:text-base! leading-[1.4] tracking-[0.2px] border rounded-md px-3 py-2 focus:ring-2 focus:outline-none transition ${
                   errors.email
                     ? "border-red-500 focus:ring-red-400"
-                    : "border-other-border focus:ring-primary-400"
+                    : "border-other-border focus:ring-main-primary-400"
                 }
                 ${
                   form.email === ""
@@ -143,7 +143,7 @@ export default function Login() {
                   className={`w-full font-dm font-normal text-sm md:text-base! leading-[1.4] tracking-[0.2px] border rounded-md px-3 py-2 focus:ring-2 focus:outline-none transition ${
                     errors.password
                       ? "border-red-500 focus:ring-red-400"
-                      : "border-other-border focus:ring-primary-400"
+                      : "border-other-border focus:ring-main-primary-400"
                   }
                   ${
                     form.password === ""

@@ -16,7 +16,7 @@ export default function Register() {
 
   const navigate = useNavigate();
   const [form, setForm] = useState({
-    fullName: "",
+    fullname: "",
     email: "",
     gender: "",
     phone: "",
@@ -25,7 +25,7 @@ export default function Register() {
   });
 
   const [errors, setErrors] = useState({
-    fullName: "",
+    fullname: "",
     email: "",
     gender: "",
     phone: "",
@@ -88,7 +88,7 @@ export default function Register() {
   // helper: validate all field now (sinkron)
   const validateAll = () => {
     const newErrors = {
-      fullName: "",
+      fullname: "",
       email: "",
       gender: "",
       phone: "",
@@ -139,7 +139,7 @@ export default function Register() {
 
       // register
       const res = await api.post("/users", {
-        fullName: form.fullName,
+        fullname: form.fullname,
         email: form.email,
         gender: form.gender,
         phone: parsed.number,
@@ -185,32 +185,32 @@ export default function Register() {
             {/* Full Name */}
             <div className="flex flex-col gap-1">
               <label
-                htmlFor="fullName"
+                htmlFor="fullname"
                 className="block font-dm font-normal text-sm md:text-base! leading-[1.4] tracking-[0.2px] text-text-dark-secondary"
               >
                 Nama Lengkap <span className="text-error-default">*</span>
               </label>
               <input
                 type="text"
-                name="fullName"
-                value={form.fullName}
+                name="fullname"
+                value={form.fullname}
                 onChange={handleChange}
                 placeholder="Masukkan Nama Lengkap"
                 className={`w-full font-dm font-normal text-sm md:text-base! leading-[1.4] tracking-[0.2px] border rounded-md px-3 py-2 focus:ring-2 focus:outline-none transition ${
-                  errors.fullName
+                  errors.fullname
                     ? "border-red-500 focus:ring-red-400"
-                    : "border-other-border focus:ring-primary-400"
+                    : "border-other-border focus:ring-main-primary-400"
                 }
                 ${
-                  form.fullName === ""
+                  form.fullname === ""
                     ? "placeholder:text-text-dark-disabled text-text-dark-disabled"
                     : "text-text-dark-primary"
                 }`}
                 required
               />
               {/* Error Message */}
-              {errors.fullName && (
-                <span className="text-red-500 text-sm">{errors.fullName}</span>
+              {errors.fullname && (
+                <span className="text-red-500 text-sm">{errors.fullname}</span>
               )}
             </div>
 
@@ -231,7 +231,7 @@ export default function Register() {
                 className={`w-full font-dm font-normal text-sm md:text-base! leading-[1.4] tracking-[0.2px] border rounded-md px-3 py-2 focus:ring-2 focus:outline-none transition ${
                   errors.email
                     ? "border-red-500 focus:ring-red-400"
-                    : "border-other-border focus:ring-primary-400"
+                    : "border-other-border focus:ring-main-primary-400"
                 }
                 ${
                   form.email === ""
@@ -298,7 +298,7 @@ export default function Register() {
                   className={`w-full font-dm font-normal text-sm md:text-base! leading-[1.4] tracking-[0.2px] border rounded-md px-3 py-2 focus:ring-2 focus:outline-none transition ${
                     errors.password
                       ? "border-red-500 focus:ring-red-400"
-                      : "border-other-border focus:ring-primary-400"
+                      : "border-other-border focus:ring-main-primary-400"
                   }
                   ${
                     form.password === ""
@@ -365,7 +365,7 @@ export default function Register() {
                   className={`w-full font-dm font-normal text-sm md:text-base! leading-[1.4] tracking-[0.2px] border rounded-md px-3 py-2 focus:ring-2 focus:outline-none transition ${
                     errors.confirmPassword
                       ? "border-red-500 focus:ring-red-400"
-                      : "border-other-border focus:ring-primary-400"
+                      : "border-other-border focus:ring-main-primary-400"
                   }
                   ${
                     form.confirmPassword === ""
